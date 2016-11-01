@@ -1,0 +1,1 @@
+args: descriptiveFilename KmerFnamePrefix KmerFnameSuffix Kmer_length splitbits OutputFile workingDirectory
