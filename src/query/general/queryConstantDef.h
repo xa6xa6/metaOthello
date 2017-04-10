@@ -4,6 +4,8 @@
 using namespace std;
 
 #define QUERY_SEQ_LENGTH_MAX 1024
+#define FUSION_GENE_PAIR_DETECTION_BUFFER_MAX 2
+#define FUSION_GENE_PAIR_DETECTION_ANCHOR_KMER_NUM_MIN 1
 typedef unsigned long long keyT;
 //typedef uint64_t valueT;
 typedef uint16_t valueT;

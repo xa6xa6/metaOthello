@@ -21,6 +21,61 @@ HEADERS= src/Ye_implementation/*.h
 
 #all_test: test2 test4 test8 test16
 
+assignMetagenomicsRead_allTaxoRank_12_w2: src/metagenomics/assignRead/assignMetagenomicsRead_allTaxoRank.cpp src/Ye_implementation/*.h
+	g++ $(CXXFLAGS) -o $@ src/metagenomics/assignRead/assignMetagenomicsRead_allTaxoRank.cpp -DVALUELENGTH=12 -D W2	
+
+clean_assignMetagenomicsRead_allTaxoRank_12_w2:
+	rm assignMetagenomicsRead_allTaxoRank_12_w2
+
+assignMetagenomicsRead_allTaxoRank_12: src/metagenomics/assignRead/assignMetagenomicsRead_allTaxoRank.cpp src/Ye_implementation/*.h
+	g++ $(CXXFLAGS) -o $@ src/metagenomics/assignRead/assignMetagenomicsRead_allTaxoRank.cpp -DVALUELENGTH=12	
+
+clean_assignMetagenomicsRead_allTaxoRank_12:
+	rm assignMetagenomicsRead_allTaxoRank_12
+
+
+examineKaijuNodeDmpWithSimData:
+	g++ $(CFLAGS) -o $(OUTPUTDIR)examineKaijuNodeDmpWithSimData src/metagenomics/utils/examineKaijuNodeDmpWithSimData.cpp
+
+clean_examineKaijuNodeDmpWithSimData:
+	rm examineKaijuNodeDmpWithSimData
+
+reformKaijuResults:
+	g++ $(CFLAGS) -o $(OUTPUTDIR)reformKaijuResults src/metagenomics/utils/reformKaijuResults.cpp
+
+clean_reformKaijuResults:
+	rm reformKaijuResults
+
+reformKaijuResults_nodeDmp:
+	g++ $(CFLAGS) -o $(OUTPUTDIR)reformKaijuResults_nodeDmp src/metagenomics/utils/reformKaijuResults_nodeDmp.cpp
+
+clean_reformKaijuResults_nodeDmp:
+	rm reformKaijuResults_nodeDmp	
+
+parseTaxoNodeDmp2speciesId2taxoInfo:
+	g++ $(CFLAGS) -o $(OUTPUTDIR)parseTaxoNodeDmp2speciesId2taxoInfo src/metagenomics/utils/parseTaxoNodeDmp2speciesId2taxoInfo.cpp
+
+clean_parseTaxoNodeDmp2speciesId2taxoInfo:
+	rm parseTaxoNodeDmp2speciesId2taxoInfo
+
+assignRead2gene_16: src/geneCount/assign/assignRead2gene.cpp src/Ye_implementation/*.h
+	g++ $(CXXFLAGS) -o $@ src/geneCount/assign/assignRead2gene.cpp -DVALUELENGTH=16
+
+assignRead2fusion_16: src/geneCount/assign/assignRead2gene.cpp src/Ye_implementation/*.h
+	g++ $(CXXFLAGS) -o $@ src/geneCount/assign/assignRead2gene.cpp -DVALUELENGTH=16 -D FUSION_GENE_READ_DETECTION
+
+assignRead2gene_16_debug: src/geneCount/assign/assignRead2gene.cpp src/Ye_implementation/*.h
+	g++ $(CXXFLAGS) -o $@ src/geneCount/assign/assignRead2gene.cpp -DVALUELENGTH=16 -D PRINT_DEBUG
+
+assignRead2fusion_16_debug: src/geneCount/assign/assignRead2gene.cpp src/Ye_implementation/*.h
+	g++ $(CXXFLAGS) -o $@ src/geneCount/assign/assignRead2gene.cpp -DVALUELENGTH=16 -D FUSION_GENE_READ_DETECTION -D PRINT_DEBUG
+
+simulator:
+	g++ $(CFLAGS) -o $(OUTPUTDIR)simulator src/geneCount/utils/simulator.cpp
+
+countSimulatedGeneCount:
+	g++ $(CFLAGS) -o $(OUTPUTDIR)countSimulatedGeneCount src/geneCount/utils/countSimulatedGeneCount.cpp	
+
 getTaxoInfo_from_speciesFa2taxoInfoFile:
 	g++ $(CXXFLAGS) -o $(OUTPUTDIR)getTaxoInfo_from_speciesFa2taxoInfoFile src/metagenomics/utils/getTaxoInfo_from_speciesFa2taxoInfoFile.cpp
 
@@ -144,12 +199,6 @@ evaluateAssignmentResults_allTaxoRankFormat:
 clean_evaluateAssignmentResults_allTaxoRankFormat:
 	rm evaluateAssignmentResults_allTaxoRankFormat
 
-assignMetagenomicsRead_allTaxoRank_12_w2: src/metagenomics/assignRead/assignMetagenomicsRead_allTaxoRank.cpp src/Ye_implementation/*.h
-	g++ $(CXXFLAGS) -o $@ src/metagenomics/assignRead/assignMetagenomicsRead_allTaxoRank.cpp -DVALUELENGTH=12 -D W2	
-
-clean_assignMetagenomicsRead_allTaxoRank_12_w2:
-	rm assignMetagenomicsRead_allTaxoRank_12_w2
-
 assignMetagenomicsRead_allTaxoRank_12_w2_assignInfo: src/metagenomics/assignRead/assignMetagenomicsRead_allTaxoRank.cpp src/Ye_implementation/*.h
 	g++ $(CXXFLAGS) -o $@ src/metagenomics/assignRead/assignMetagenomicsRead_allTaxoRank.cpp -DVALUELENGTH=12 -D W2	-D ASSIGN_INFO
 
@@ -170,19 +219,19 @@ clean_assignMetagenomicsRead_allTaxoRank_13_w2_assignInfo:
 	rm assignMetagenomicsRead_allTaxoRank_13_w2_assignInfo
 
 
-
-
-assignMetagenomicsRead_allTaxoRank_12: src/metagenomics/assignRead/assignMetagenomicsRead_allTaxoRank.cpp src/Ye_implementation/*.h
-	g++ $(CXXFLAGS) -o $@ src/metagenomics/assignRead/assignMetagenomicsRead_allTaxoRank.cpp -DVALUELENGTH=12	
-
-clean_assignMetagenomicsRead_allTaxoRank_12:
-	rm assignMetagenomicsRead_allTaxoRank_12
-
 assignMetagenomicsRead_allTaxoRank_12_noFiltering: src/metagenomics/assignRead/assignMetagenomicsRead_allTaxoRank.cpp src/Ye_implementation/*.h
 	g++ $(CXXFLAGS) -o $@ src/metagenomics/assignRead/assignMetagenomicsRead_allTaxoRank.cpp -DVALUELENGTH=12 -D NO_FILTERING
 
 clean_assignMetagenomicsRead_allTaxoRank_12_noFiltering:
 	rm assignMetagenomicsRead_allTaxoRank_12_noFiltering
+
+assignMetagenomicsRead_allTaxoRank_12_noFiltering_w2: src/metagenomics/assignRead/assignMetagenomicsRead_allTaxoRank.cpp src/Ye_implementation/*.h
+	g++ $(CXXFLAGS) -o $@ src/metagenomics/assignRead/assignMetagenomicsRead_allTaxoRank.cpp -DVALUELENGTH=12 -D NO_FILTERING -D NO_FILTERING_AT_BOTH_ENDS -D W2
+
+clean_assignMetagenomicsRead_allTaxoRank_12_noFiltering_w2:
+	rm assignMetagenomicsRead_allTaxoRank_12_noFiltering_w2
+
+
 
 assignMetagenomicsRead_allTaxoRank_12_noFilteringAtBothEnds: src/metagenomics/assignRead/assignMetagenomicsRead_allTaxoRank.cpp src/Ye_implementation/*.h
 	g++ $(CXXFLAGS) -o $@ src/metagenomics/assignRead/assignMetagenomicsRead_allTaxoRank.cpp -DVALUELENGTH=12 -D NO_FILTERING_AT_BOTH_ENDS
@@ -365,6 +414,15 @@ buildLothelloTreeKmerProfileFromScratch:
 buildLothelloNodeKmerProfile:
 	g++ $(CFLAGS) -o $(OUTPUTDIR)buildLothelloNodeKmerProfile src/generateKmerProfile/buildLothelloNodeKmerProfile.cpp
 
+buildLothelloNodeBitArray_24: src/generateBitArray/buildLothelloNodeBitArray.cpp src/Ye_implementation/*.h
+	g++ $(CXXFLAGS) -o $@ src/generateBitArray/buildLothelloNodeBitArray.cpp -DVALUELENGTH=24
+
+buildLothelloNodeBitArray_20: src/generateBitArray/buildLothelloNodeBitArray.cpp src/Ye_implementation/*.h
+	g++ $(CXXFLAGS) -o $@ src/generateBitArray/buildLothelloNodeBitArray.cpp -DVALUELENGTH=20
+
+buildLothelloNodeBitArray_18: src/generateBitArray/buildLothelloNodeBitArray.cpp src/Ye_implementation/*.h
+	g++ $(CXXFLAGS) -o $@ src/generateBitArray/buildLothelloNodeBitArray.cpp -DVALUELENGTH=18
+
 buildLothelloNodeBitArray_16: src/generateBitArray/buildLothelloNodeBitArray.cpp src/Ye_implementation/*.h
 	g++ $(CXXFLAGS) -o $@ src/generateBitArray/buildLothelloNodeBitArray.cpp -DVALUELENGTH=16
 
@@ -501,3 +559,15 @@ clean_readAssignment_4_assignInfo:
 
 clean_extractGenomeRepeatRegion_4:
 	rm extractGenomeRepeatRegion_4
+
+clean_simulator:
+	rm simulator
+
+clean_countSimulatedGeneCount:
+	rm countSimulatedGeneCount
+
+clean_assignRead2gene_16:
+	rm assignRead2gene_16
+
+clean_assignRead2fusion_16:
+	rm assignRead2fusion_16	
