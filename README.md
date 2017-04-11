@@ -11,8 +11,6 @@ Classifier -- The code under "classifier" is used to perform taxonomic classific
 ************************
 ************************
 Builder usage:
-************************
-************************
   
   Ready-built indexes indexes: Building indexing is very time-consuming (costs about 6 hours to build index for NCBI/refseq bacterial genome database).
   Thereby, we provided ready-built indexes (NCBI/refseq bacterial genome database) for users to download:
@@ -66,8 +64,6 @@ Builder usage:
 ************************
 ************************
 Classifier usage
-************************
-************************
 
     Step1: run “make assignMetagenomicsRead_allTaxoRank_12_w2” under the directory "classifier"
     Step2: perform taxonomic classification for each metagenomics sequencing reads
