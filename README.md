@@ -20,10 +20,23 @@ Builder usage:
   If you want to build index with your own reference sequences,
 
   Step1: Preparing Kmer files for each reference sequence using jellyfish : http://www.cbcb.umd.edu/software/jellyfish/
+
     Step1.1: get Kmer count file:
-    Command: jellyfish count –o <path_to_bacterial_rawKmerCountFile> -m <Kmer_length> -t <threads_num> -s <bf_size> -C <path_to_bacterial_referenceSeqFastaFile>
+    Command: 
+    jellyfish count \
+    –o <path_to_bacterial_rawKmerCountFile> \
+    -m <Kmer_length> \
+    -t <threads_num> \
+    -s <bf_size> \
+    -C <path_to_bacterial_referenceSeqFastaFile>
+
     Step1.2: dump to human-readable format
-    Command: jellyfish dump –t –c –o <path_to_bacterial_readableKmerCountFile> <path_to_bacterial_rawKmerCountFile>
+    Command: 
+    jellyfish dump \
+    –t –c \
+    –o <path_to_bacterial_readableKmerCountFile> \
+    <path_to_bacterial_rawKmerCountFile>
+   
     Step1.3: put all readable Kmer count files into the same directory <path_to_bacterial_reference_seq_Kmer_file_dir> 
     and rename them as 1.Kmer, 2.Kmer, …, m.Kmer, and generated a taxonomy info file like: 
     https://drive.google.com/open?id=0BxgO-FKbbXRIZlV3ZzBBdlFpMTQ
