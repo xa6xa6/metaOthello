@@ -37,17 +37,19 @@ Builder usage:
     –o <path_to_bacterial_readableKmerCountFile> \
     <path_to_bacterial_rawKmerCountFile>
    
-    Step1.3: put all readable Kmer count files into the same directory <path_to_bacterial_reference_seq_Kmer_file_dir> 
+    Step1.3: put all readable Kmer count files into the same directory 
+    <path_to_bacterial_reference_seq_Kmer_file_dir> 
     and rename them as 1.Kmer, 2.Kmer, …, m.Kmer, and generated a taxonomy info file like: 
     https://drive.google.com/open?id=0BxgO-FKbbXRIZlV3ZzBBdlFpMTQ
     
     There are three columns for each taxonomic rank in the file: the 1st column is a reissued id from 0 to m-1, 
     where m is the total taxon num in that taxonomic rank. The 2nd column lists taxon ids and the 3rd column lists taxon scientific names. 
-    Each raw represents a species and its associated taxonomy info.
+    Each row represents a species and its associated taxonomy info.
 
   Step2: run "make build" under the directory "build"
   
   Step3:
+    Command:
     ./build \
     <bacterial_reference_seq_associated_taxonomy_info_file(generated in Step1.3)> \
     <path_to_bacterial_reference_seq_Kmer_file_dir> \
@@ -57,3 +59,35 @@ Builder usage:
     <path_to_a_temp_dir_for_intermediate_files>
 
 Classifier usage
+
+    Step1: run “make assignMetagenomicsRead_allTaxoRank_12_w2” under the directory "classifier"
+    Step2: perform taxonomic classification for each metagenomics sequencing reads
+    Command:
+    ./classifier \
+    <path_to_bacterial_index> \
+    <path_to_output_results_dir> \
+    <Kmer_length> \
+    <threads_num> \
+    <fa_or_fq> \
+    <SE_or_PE> \
+    <bacterial_speciesId2taxoInfo_file> \ 
+    <NCBI_names_file> \
+    <readFile_singleEnd or readFile_end1> \
+    (<readFile_end2 if paired-end reads are provided>)
+
+
+    <bacterial_speciesId2taxoInfo_file> can be downloaded at: https://drive.google.com/open?id=0BxgO-FKbbXRIc3FkLVFvMlpVVGM    
+    Each row represents a species and its associated taxon ids at each taxonomic rank:
+    species, genus, family, order, class, and phylum. Assign "-1" if the taxon id is not available.
+
+    <NCBI_names_file> can be downloaded at: https://drive.google.com/open?id=0BxgO-FKbbXRIUFI2dHlBMXZhdTA
+
+    NOTE: 
+
+    we will keep the following files updated with the latest NCBI/refseq bacterial genome databases:
+    1. bacterial reference seq associated taxonomy info file,
+    2. bacerial index (MetaOthello index for classification)
+    3. bacterial speciesId2taxoInfo_file
+    4. NCBI names file
+
+    Also, we will release tools for generating all the above files (from NCBI/refseq bacterial genome databases) very soon.
