@@ -47,7 +47,7 @@ Builder usage:
 
   Step2: run "make build" under the directory "build"
   
-  Step3: 
+  Step3:
     ./build \
     <bacterial_reference_seq_associated_taxonomy_info_file(generated in Step1.3)> \
     <path_to_bacterial_reference_seq_Kmer_file_dir> \
@@ -55,5 +55,5 @@ Builder usage:
     <Kmer_length> 6 \
     <path_to_bacterial_index> \
     <path_to_a_temp_dir_for_intermediate_files>
-s
+
 Classifier usage
