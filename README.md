@@ -8,7 +8,11 @@ There are two code folders "build" and "classifier"
 Builder -- The code under "build" is used to generate the MetaOhtello index.
 Classifier -- The code under "classifier" is used to perform taxonomic classification of sequencing reads using MetaOthello Index.
 
+************************
+************************
 Builder usage:
+************************
+************************
   
   Ready-built indexes indexes: Building indexing is very time-consuming (costs about 6 hours to build index for NCBI/refseq bacterial genome database).
   Thereby, we provided ready-built indexes (NCBI/refseq bacterial genome database) for users to download:
@@ -58,7 +62,12 @@ Builder usage:
     <path_to_bacterial_index> \
     <path_to_a_temp_dir_for_intermediate_files>
 
+
+************************
+************************
 Classifier usage
+************************
+************************
 
     Step1: run “make assignMetagenomicsRead_allTaxoRank_12_w2” under the directory "classifier"
     Step2: perform taxonomic classification for each metagenomics sequencing reads
@@ -83,7 +92,6 @@ Classifier usage
     <NCBI_names_file> can be downloaded at: https://drive.google.com/open?id=0BxgO-FKbbXRIUFI2dHlBMXZhdTA
 
     NOTE: 
-
     we will keep the following files updated with the latest NCBI/refseq bacterial genome databases:
     1. bacterial reference seq associated taxonomy info file,
     2. bacerial index (MetaOthello index for classification)
