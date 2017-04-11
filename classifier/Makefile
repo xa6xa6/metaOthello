@@ -19,6 +19,8 @@ CXXFLAGS+= -fopenmp
 
 HEADERS= src/othello/*.h
 
+classifier: src/metagenomics/assignMetagenomicsRead_allTaxoRank.cpp src/othello/*.h
+	g++ $(CXXFLAGS) -o $@ src/metagenomics/assignMetagenomicsRead_allTaxoRank.cpp -DVALUELENGTH=12 -D W2
 
 assignMetagenomicsRead_allTaxoRank_12_w2: src/metagenomics/assignMetagenomicsRead_allTaxoRank.cpp src/othello/*.h
 	g++ $(CXXFLAGS) -o $@ src/metagenomics/assignMetagenomicsRead_allTaxoRank.cpp -DVALUELENGTH=12 -D W2
