@@ -65,7 +65,7 @@ Builder usage:
 ************************
 Classifier usage
 
-    Step1: run “make assignMetagenomicsRead_allTaxoRank_12_w2” under the directory "classifier"
+    Step1: run “make classifier” under the directory "classifier"
     Step2: perform taxonomic classification for each metagenomics sequencing reads
     Command:
     ./classifier \
