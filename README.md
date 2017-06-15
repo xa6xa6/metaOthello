@@ -96,7 +96,7 @@ Classifier usage
 
     Also, we will release tools for generating all the above files (from NCBI/refseq bacterial genome databases) very soon.
 
-#License
+# License
     
     Copyright (C) 2016-, University of Kentucky
 
