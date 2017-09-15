@@ -8,7 +8,6 @@ There are two code folders:
 * Builder -- The code under "build" is used to generate the MetaOthello index.
 * Classifier -- The code under "classifier" is used to perform taxonomic classification of sequencing reads using MetaOthello Index.
 
-************************
 ## Builder usage
   
 ### Ready-built indexes indexes 
@@ -22,8 +21,7 @@ Therefore, we provide ready-built indexes (NCBI/refseq bacterial genome database
 ### Building your own index
 If you want to build an index with your own reference sequences, follow these steps. 
 
-#### Preparing Kmer files for each reference sequence using jellyfish
-Download *jellyfish* from: http://www.cbcb.umd.edu/software/jellyfish/
+Jellyfish is used to prepare k-mer files for each reference sequence. Download *jellyfish* from: http://www.cbcb.umd.edu/software/jellyfish/
 1. Produce a k-mer count file for your reference seqeuences. Command: 
 ```
     jellyfish count \
@@ -66,8 +64,6 @@ Download *jellyfish* from: http://www.cbcb.umd.edu/software/jellyfish/
     <path_to_a_temp_dir_for_intermediate_files>
 ```
 
-
-************************
 ## Classifier usage
 
 1. Run `make classifier` in the `classifier` directory. 
