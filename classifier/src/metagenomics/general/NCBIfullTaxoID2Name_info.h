@@ -1,3 +1,4 @@
+// This file is provided as a part of MetaOthello. Please refer to LICENSE.TXT for the 'License'
 #ifndef NCBIFULLTAXOID2NAME_INFO_H
 #define NCBIFULLTAXOID2NAME_IFNO_H
 #include <stdio.h>

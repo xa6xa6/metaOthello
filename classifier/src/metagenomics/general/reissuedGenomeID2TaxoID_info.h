@@ -1,3 +1,4 @@
+// This file is provided as a part of MetaOthello. Please refer to LICENSE.TXT for the 'License'
 #ifndef REISSUEDGENOMEID2TAXOID_INFO_H
 #define REISSUEDGENOMEID2TAXOID_IFNO_H
 #include <stdio.h>

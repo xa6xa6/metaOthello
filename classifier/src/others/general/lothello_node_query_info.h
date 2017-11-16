@@ -1,3 +1,4 @@
+// This file is provided as a part of MetaOthello. Please refer to LICENSE.TXT for the 'License'
 #ifndef LOTHELLO_NODE_QUERY_INFO_H
 #define LOTHELLO_NODE_QUERY_INFO_H
 #include <stdio.h>

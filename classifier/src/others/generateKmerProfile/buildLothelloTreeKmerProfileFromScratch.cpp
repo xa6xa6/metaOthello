@@ -1,3 +1,4 @@
+// This file is provided as a part of MetaOthello. Please refer to LICENSE.TXT for the 'License'
 // 2, // level 0 -- root -- source: 0~2 at level 1
 // 2,5,8, // level 1 -- source: NODE 0: 0~2 at level 2, NODE 1: 3~5 at level 2; NODE 2: 6~8 at level 2
 // 2,5,8,11,14,17,20,23,26,

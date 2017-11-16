@@ -1,3 +1,4 @@
+// This file is provided as a part of MetaOthello. Please refer to LICENSE.TXT for the 'License'
 // MEMORY: 1.5*N*M/256; metagenomics: 9*M/256
 #include <stdio.h>
 #include <stdlib.h>

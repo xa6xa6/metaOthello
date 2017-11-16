@@ -1,3 +1,4 @@
+// This file is provided as a part of MetaOthello. Please refer to LICENSE.TXT for the 'License'
 #ifndef SORTKMERBIN_INFO_H
 #define SORTKMERBIN_INFO_H
 #include <stdio.h>

@@ -1,3 +1,4 @@
+// This file is provided as a part of MetaOthello. Please refer to LICENSE.TXT for the 'License'
 #ifndef MERGEJF_INFO_H
 #define MERGEJF_INFO_H
 #include <stdio.h>
