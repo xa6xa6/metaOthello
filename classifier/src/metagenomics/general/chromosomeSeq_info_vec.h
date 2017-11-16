@@ -1,3 +1,4 @@
+// This file is provided as a part of MetaOthello. Please refer to LICENSE.TXT for the 'License'
 #ifndef CHROMOSOMESEQ_INFO_VEC_H
 #define CHROMOSOMESEQ_IFNO_VEC_H
 #include <stdio.h>

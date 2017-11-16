@@ -1,3 +1,4 @@
+// This file is provided as a part of MetaOthello. Please refer to LICENSE.TXT for the 'License'
 #ifndef SPECIES_INFO_H
 #define SPECIES_IFNO_H
 #include <stdio.h>

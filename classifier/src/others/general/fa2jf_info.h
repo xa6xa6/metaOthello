@@ -1,3 +1,4 @@
+// This file is provided as a part of MetaOthello. Please refer to LICENSE.TXT for the 'License'
 #ifndef FA2JF_INFO_H
 #define FA2JF_INFO_H
 #include <stdio.h>

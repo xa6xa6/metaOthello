@@ -1,3 +1,4 @@
+// This file is provided as a part of MetaOthello. Please refer to LICENSE.TXT for the 'License'
 /*!
  * \file typedefine.h
  * contains templates that expands L-bit integer to uint8_t/uint16_t/uint32_t/uint64_t
