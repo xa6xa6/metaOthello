@@ -33,7 +33,7 @@ of UKY.
 the Software and Modifications, if any, in their research.  The
 Developers and UKY are permitted to use any information Recipient
 provides in making changes to the Software. All feedback, bug reports
-and technical questions shall be sent to: SeqOthello@googlegroups.com
+and technical questions shall be sent to: MetaOthello@googlegroups.com
 
 6) Recipient acknowledges that the Developers, UKY and its licensees
 may develop modifications to Software that may be substantially
