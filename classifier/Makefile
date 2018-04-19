@@ -27,3 +27,7 @@ assignMetagenomicsRead_allTaxoRank_12_w2: src/metagenomics/assignMetagenomicsRea
 
 assignMetagenomicsRead_allTaxoRank_13_w2: src/metagenomics/assignMetagenomicsRead_allTaxoRank.cpp src/othello/*.h
 	g++ $(CXXFLAGS) -o $@ src/metagenomics/assignMetagenomicsRead_allTaxoRank.cpp -DVALUELENGTH=13 -D W2
+
+getTaxonReadCount: 
+	g++ $(CXXFLAGS) -o $@ src/others/utils/getTaxonReadCount.cpp
+	
